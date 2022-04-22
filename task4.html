@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hinh chu nhat</title>
+</head>
+<body>
+<canvas id="canvas" width="500" height="500" style="border: 1px solid black" ></canvas>
+<script>
+    let canvas = document.getElementById("canvas")
+    let ctx = canvas.getContext ("2d")
+    class Rect {
+        constructor() {
+            this.x = 10
+            this.y = 10
+            this.width = 200
+            this.height = 100
+            this.color = "#000000"
+        }
+        render() {
+            ctx.beginPath()
+            ctx.fillStyle = this.color
+            ctx.fillRect(this.x, this.y ,this.width, this.height)
+            ctx.closePath()
+        }
+    }
+let rect = new Rect()
+    rect.render()
+
+</script>
+</body>
+</html>
